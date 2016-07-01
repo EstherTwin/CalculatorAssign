@@ -8,32 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+typedef enum{ Plus,Minus,Multiply,Divide} CalcOperation;
 
-@property (strong, nonatomic) IBOutlet UILabel *calculatorDisplay;
-@property (nonatomic) BOOL typingNumber; //check if user is typing a number
-@property (nonatomic) int firstNumber;
-@property (nonatomic) int secondNumber;
-@property (nonatomic, copy) NSString *operation; // plus or minus operation
+@interface ViewController : UIViewController{
+    
+    IBOutlet UITextField *Display;
+    NSString *storage;
+    CalcOperation operation;
+}
+- (IBAction)button7:(UIButton *)sender;
+- (IBAction)button8:(UIButton *)sender;
+- (IBAction)button9:(UIButton *)sender;
+- (IBAction)multiplybutton:(UIButton *)sender;
+- (IBAction)button4:(UIButton *)sender;
+- (IBAction)button5:(UIButton *)sender;
+- (IBAction)button6:(UIButton *)sender;
+- (IBAction)button1:(UIButton *)sender;
+- (IBAction)button2:(UIButton *)sender;
+- (IBAction)button3:(UIButton *)sender;
+- (IBAction)minusbutton:(UIButton *)sender;
+- (IBAction)equalsbutton:(UIButton *)sender;
+- (IBAction)button0:(UIButton *)sender;
+- (IBAction)plusbutton:(UIButton *)sender;
 
-
-- (IBAction)btn1:(UIButton *)sender;
-- (IBAction)btn2:(UIButton *)sender;
-- (IBAction)btn3:(UIButton *)sender;
-- (IBAction)btn4:(UIButton *)sender;
-- (IBAction)btn5:(UIButton *)sender;
-- (IBAction)btn6:(UIButton *)sender;
-- (IBAction)btn7:(UIButton *)sender;
-- (IBAction)btn8:(UIButton *)sender;
-- (IBAction)btn9:(UIButton *)sender;
-- (IBAction)btnZero:(UIButton *)sender;
-
-
-- (IBAction)numberPressed:(UIButton *)sender;
-- (IBAction)calculatorDisplay: (UIButton *) sender;
-- (IBAction) equalsPressed: (UIButton *)sender;
-- (IBAction) calculatorPressed: (id) sender;
-
+- (IBAction)dividebutton:(UIButton *)sender;
+- (IBAction)clear:(UIButton *)sender;
 
 @end
+
+
 
